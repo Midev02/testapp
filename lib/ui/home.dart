@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 class ScaffoldExample extends StatelessWidget {
   const ScaffoldExample({Key? key}) : super(key: key);
 
-
-  _tapbutton(){
+  _tapbutton() {
     print("Boutton appuyé");
   }
 
@@ -16,14 +15,30 @@ class ScaffoldExample extends StatelessWidget {
         centerTitle: true,
         actions: <Widget>[
           IconButton(onPressed: _tapbutton, icon: Icon(Icons.notifications)),
-        IconButton(onPressed: (){print("Boutton non appuyé");}, icon: Icon(Icons.alarm_add))
+          IconButton(
+              onPressed: () {
+                print("Boutton non appuyé");
+              },
+              icon: Icon(Icons.alarm_add))
         ],
         backgroundColor: Colors.amberAccent,
       ),
       backgroundColor: Colors.greenAccent,
       body: Container(
         alignment: Alignment.center,
-        child: Text("Hello"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+
+            InkWell(
+
+              child: Text("tape moi", style: TextStyle(fontSize: 23.1),),
+
+              onTap: () => debugPrint("Hello"),
+            )
+
+          ],
+        ),
       ),
     );
   }
@@ -37,7 +52,3 @@ class Home extends StatelessWidget {
     return Container();
   }
 }
-
-
-
-
