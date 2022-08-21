@@ -20,10 +20,10 @@ class ScaffoldExample extends StatelessWidget {
         ],
         backgroundColor: Colors.amberAccent,
       ),
-      backgroundColor: Colors.redAccent,
+      backgroundColor: Colors.greenAccent,
       body: Container(
         alignment: Alignment.center,
-        child: Text("Coucou"),
+        child: Text("Hello"),
       ),
     );
   }
